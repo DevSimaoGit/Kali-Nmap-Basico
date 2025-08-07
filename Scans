@@ -1,0 +1,59 @@
+Identificar o alvo
+
+
+2.1 Descobrir IPs na rede
+
+ip a
+ou
+ifconfig
+(Procure pelo IP, ex: inet 192.168.0.105/24)
+
+##
+
+Fazer o primeiro scan
+
+
+3.1 Descobrir hosts ativos (ping scan)
+
+nmap -sn 192.168.0.0/24
+
+
+Scan de portas
+
+##
+
+4.1 Scan rápido
+bash
+Copiar
+Editar
+
+nmap 192.168.0.105
+
+##
+
+
+Detectar serviços e versões
+
+nmap -sV 192.168.0.105
+
+
+Scan agressivo
+
+nmap -A 192.168.0.105
+
+
+Salvar resultado
+
+nmap -sV -oN resultado.txt 192.168.0.105
+
+
+Recapitulando comandos
+
+| Comando                          | Função                               |
+| -------------------------------- | ------------------------------------ |
+| `nmap -sn 192.168.0.0/24`        | Descobrir hosts ativos               |
+| `nmap 192.168.0.105`             | Scan básico de portas                |
+| `nmap -p 1-1000 192.168.0.105`   | Scan de portas com range definido    |
+| `nmap -sV 192.168.0.105`         | Detectar serviços e versões          |
+| `nmap -A 192.168.0.105`          | Scan agressivo completo              |
+| `nmap -sV -oN resultado.txt ...` | Salvar resultado em arquivo de texto |
