@@ -35,3 +35,9 @@ Este repositório contém um passo a passo completo para realizar varreduras com
 
 ```bash
 nmap --version
+
+Se não estiver, instale:
+
+Copiar
+Editar
+sudo apt update && sudo apt install nmap -y
